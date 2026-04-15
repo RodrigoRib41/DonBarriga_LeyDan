@@ -119,7 +119,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 pt-6">
-          <p className="text-center text-sm text-background/60">© 2026 Don Barriga - Le & Dan. Todos los derechos reservados.</p>
+          <p className="text-center text-sm text-background/60">© 2026 Rodrigo Riboldi. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
