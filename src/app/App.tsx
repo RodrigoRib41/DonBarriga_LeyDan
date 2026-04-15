@@ -5,7 +5,6 @@ import { ProductosSection } from './components/ProductosSection';
 import { DestacadosSection } from './components/DestacadosSection';
 import { NosotrosSection } from './components/NosotrosSection';
 import { ViandasSection } from './components/ViandasSection';
-import { TestimoniosSection } from './components/TestimoniosSection';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 
@@ -20,7 +19,6 @@ export default function App() {
         <DestacadosSection />
         <NosotrosSection />
         <ViandasSection />
-        <TestimoniosSection />
         <Footer />
       </main>
       <WhatsAppButton />

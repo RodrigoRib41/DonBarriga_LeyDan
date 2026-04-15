@@ -50,10 +50,10 @@ export function Header() {
               />
             </div>
             <div className="hidden lg:block ml-2">
-              <h1 className="text-base leading-tight text-primary">
-                Don Barriga & Le & Dan
+              <h1 className="text-base leading-tight text-primary ">
+                Don Barriga / Le & Dan
               </h1>
-              <p className="text-xs text-muted-foreground">Pastas & Viandas Artesanales</p>
+              <p className="text-xs text-muted-foreground">Pastas, Fiambres, Quesos & Viandas Artesanales</p>
             </div>
           </motion.div>
 

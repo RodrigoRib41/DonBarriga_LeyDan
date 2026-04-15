@@ -1,4 +1,6 @@
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from 'lucide-react';
+import logoLeAndDan from '../../imports/image-2.png';
+import logoDonBarriga from '../../imports/image-3.png';
 
 export function Footer() {
   return (
@@ -6,34 +8,52 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-xl">🍝</span>
-              </div>
-              <div>
-                <h3 className="text-lg">Don Barriga & Le & Dan</h3>
-                <p className="text-xs text-background/70">Pastas Artesanales</p>
-              </div>
-            </div>
-            <p className="text-sm text-background/80 leading-relaxed">
-              Pastas frescas, quesos artesanales, fiambres premium y viandas caseras. 
-              La tradición italiana en cada bocado.
-            </p>
-          </div>
+          <div className="flex flex-col items-center text-center">
+  
+  <div className="flex items-center justify-center gap-2 mb-4">
+    <img 
+      src={logoDonBarriga} 
+      alt="Don Barriga" 
+      className="h-12 w-auto object-contain"
+    />
+
+    <span className="text-primary text-xl">&</span>
+
+    <img 
+      src={logoLeAndDan} 
+      alt="Le & Dan" 
+      className="h-12 w-auto object-contain"
+    />
+  </div>
+
+  <div className="mb-2">
+    <h3 className="text-lg font-semibold">
+      Don Barriga - Le & Dan
+    </h3>
+    <p className="text-xs text-background/70">
+      Pastas Artesanales
+    </p>
+  </div>
+
+  <p className="text-sm text-background/80 leading-relaxed max-w-xs">
+    Pastas frescas, quesos artesanales, fiambres premium y viandas caseras. 
+    La tradición italiana en cada bocado.
+  </p>
+
+</div>
 
           {/* Contact Info */}
           <div>
             <h3 className="text-lg mb-4">Contacto</h3>
             <div className="space-y-3">
               <a
-                href="https://wa.me/5491112345678"
+                href="https://wa.me/5493498437467"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-background/80 hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>+54 9 11 1234-5678</span>
+                <span>+54 9 3498 43-7467</span>
               </a>
               <a
                 href="mailto:info@donbarriga.com"
@@ -44,7 +64,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3 text-sm text-background/80">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Av.Example 1234<br />Buenos Aires, Argentina</span>
+                <span>E. López 353<br />Gob. Crespo, Santa Fe</span>
               </div>
             </div>
           </div>
@@ -82,7 +102,7 @@ export function Footer() {
             <h3 className="text-lg mb-4">Redes Sociales</h3>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/_don_barriga_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors"
@@ -100,7 +120,7 @@ export function Footer() {
             </div>
             <div className="mt-6">
               <p className="text-sm text-background/80 mb-2">Seguinos en Instagram</p>
-              <p className="text-sm text-primary">@donbarriga.pastas</p>
+              <p className="text-sm text-primary">@_don_barriga_</p>
             </div>
           </div>
         </div>
@@ -108,7 +128,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/60">
-            © 2026 Don Barriga & Le & Dan. Todos los derechos reservados.
+            © 2026 Don Barriga -- Le & Dan. Todos los derechos reservados.
           </p>
         </div>
       </div>
