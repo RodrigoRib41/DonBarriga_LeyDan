@@ -2,43 +2,43 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
-  --destructive: #d4183d;
+  --background: #faf6f1;
+  --foreground: #26204c;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-foreground: #26204c;
+  --popover: #fffaf6;
+  --popover-foreground: #26204c;
+  --primary: #2f2ba8;
+  --primary-foreground: #fffaf6;
+  --secondary: #dcd6fb;
+  --secondary-foreground: #2f2ba8;
+  --muted: #efeafc;
+  --muted-foreground: #6a638d;
+  --accent: #ffe7ed;
+  --accent-foreground: #b10f2f;
+  --destructive: #d61f3a;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(47, 43, 168, 0.14);
   --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --input-background: rgba(255, 255, 255, 0.88);
+  --switch-background: #c9c2ef;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --ring: rgba(47, 43, 168, 0.32);
+  --chart-1: #2f2ba8;
+  --chart-2: #d61f3a;
+  --chart-3: #948fcd;
+  --chart-4: #ffb545;
+  --chart-5: #37a377;
+  --radius: 1rem;
+  --sidebar: #fffaf6;
+  --sidebar-foreground: #26204c;
+  --sidebar-primary: #2f2ba8;
+  --sidebar-primary-foreground: #fffaf6;
+  --sidebar-accent: #efeafc;
+  --sidebar-accent-foreground: #2f2ba8;
+  --sidebar-border: rgba(47, 43, 168, 0.14);
+  --sidebar-ring: rgba(47, 43, 168, 0.32);
 }
 
 .dark {
@@ -140,6 +140,17 @@
 
   body {
     overflow-x: hidden;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background-image:
+      radial-gradient(circle at top left, rgba(214, 31, 58, 0.1), transparent 26rem),
+      radial-gradient(circle at top right, rgba(47, 43, 168, 0.12), transparent 28rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(250, 246, 241, 0.98));
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(214, 31, 58, 0.18);
+    color: var(--foreground);
   }
 
   img,
@@ -156,24 +167,30 @@
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: -0.02em;
   }
 
   h2 {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: -0.02em;
   }
 
   h3 {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
+    font-family: Georgia, "Times New Roman", serif;
   }
 
   h4 {
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
+    font-family: Georgia, "Times New Roman", serif;
   }
 
   label {

@@ -1,8 +1,12 @@
 import { motion } from 'motion/react';
 import { Calendar, Clock, Heart, Leaf } from 'lucide-react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
+import { MENU_DEL_DIA } from '../data/menus';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
+
+const viandasImage =
+  'https://images.unsplash.com/photo-1543353071-c953d88f7033?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWVhbCUyMHByZXB8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000';
 
 export function ViandasSection() {
   const beneficios = [
@@ -27,15 +31,13 @@ export function ViandasSection() {
       description: 'Menu semanal siempre renovado.',
     },
   ];
-
-  const navigate = useNavigate();
-
   return (
-    <section id="viandas" className="relative overflow-hidden bg-muted/30 py-16 md:py-20">
+    <section id="viandas" className="relative overflow-hidden py-16 md:py-20">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute left-0 top-12 h-48 w-48 rounded-full bg-primary blur-3xl sm:left-10 sm:top-20 sm:h-72 sm:w-72" />
         <div className="absolute bottom-10 right-0 h-56 w-56 rounded-full bg-secondary blur-3xl sm:right-10 sm:bottom-20 sm:h-96 sm:w-96" />
       </div>
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(220,214,251,0.12),rgba(255,231,237,0.16))]" />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -45,6 +47,7 @@ export function ViandasSection() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-10 max-w-2xl text-center md:mb-14"
         >
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-primary">Listo para llevar</p>
           <h2 className="mb-4 text-3xl text-foreground md:text-4xl">Viandas Caseras</h2>
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
             La solucion perfecta para disfrutar de comida casera todos los dias sin complicaciones.
@@ -59,15 +62,15 @@ export function ViandasSection() {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl">
+            <div className="overflow-hidden rounded-[2rem] border border-primary/10 shadow-[0_24px_60px_rgba(47,43,168,0.16)]">
               <img
-                src="https://images.unsplash.com/photo-1627362713208-8f39c21f973e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMG1lYWwlMjB2aWFuZGF8ZW58MXx8fHwxNzc2MjYyNzQwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Viandas caseras"
+                src={viandasImage}
+                alt="Viandas caseras listas para pedir"
                 className="h-[320px] w-full object-cover sm:h-[420px]"
               />
             </div>
 
-            <div className="absolute bottom-4 right-4 rounded-2xl bg-primary p-4 text-center text-primary-foreground shadow-xl sm:-bottom-6 sm:-right-6 sm:p-6">
+            <div className="absolute bottom-4 right-4 rounded-2xl bg-gradient-to-br from-[#d61f3a] to-[#ef4c64] p-4 text-center text-primary-foreground shadow-xl sm:-bottom-6 sm:-right-6 sm:p-6">
               <p className="mb-1 text-xs uppercase tracking-[0.2em] text-primary-foreground/80 sm:text-sm">Menu semanal</p>
               <p className="text-xl font-semibold sm:text-2xl">Lun a Vie</p>
             </div>
@@ -99,7 +102,7 @@ export function ViandasSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.45, delay: index * 0.08 }}
                   >
-                    <Card className="h-full border-border transition-colors hover:border-primary/40">
+                    <Card className="h-full border-primary/10 bg-white/75 shadow-[0_16px_40px_rgba(47,43,168,0.08)] transition-colors hover:border-primary/40">
                       <CardContent className="p-5">
                         <div className="flex items-start gap-4 text-left sm:flex-col sm:items-center sm:text-center">
                           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
@@ -117,13 +120,11 @@ export function ViandasSection() {
               })}
             </div>
 
-            <Button
-              onClick={() => navigate('/menu-semanal')}
-              size="lg"
-              className="h-12 w-full bg-primary text-base hover:bg-primary/90 sm:w-auto sm:px-8"
-            >
-              Ver menu semanal
-            </Button>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button asChild size="lg" className="h-12 w-full bg-gradient-to-r from-primary to-[#4a45c8] text-base shadow-[0_14px_30px_rgba(47,43,168,0.18)] hover:from-primary/95 hover:to-[#4a45c8]/95 sm:w-auto sm:px-8">
+                <Link to={`/menu/${MENU_DEL_DIA.slug}`}>Abrir menu de hoy</Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>
