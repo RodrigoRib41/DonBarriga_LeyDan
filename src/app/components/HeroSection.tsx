@@ -15,7 +15,7 @@ export function HeroSection() {
     <>
       <section
         id="inicio"
-        className="relative w-full min-h-[60vh] sm:min-h-[72vh] md:min-h-screen overflow-hidden bg-cover bg-center bg-no-repeat"
+        className="relative w-full min-h-[54vh] overflow-hidden bg-cover bg-center bg-no-repeat pt-16 sm:min-h-[64vh] md:min-h-[78vh] md:pt-20"
         style={{
           backgroundImage: `url(${logoFondo})`,
           backgroundPosition: 'center center',
@@ -35,8 +35,8 @@ export function HeroSection() {
         </div>
       </section>
 
-      <section className="bg-[#fef9f5] py-20 md:py-32">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-[#fef9f5] py-16 md:py-24 lg:py-28">
+        <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ export function HeroSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="mb-6 font-serif text-4xl font-bold leading-tight italic text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="mb-5 font-serif text-3xl font-bold leading-tight italic text-gray-900 sm:text-5xl md:mb-6 md:text-6xl">
                 Sabores artesanales que se sienten como en casa
               </h1>
             </motion.div>
@@ -54,7 +54,7 @@ export function HeroSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-10 text-lg leading-relaxed text-gray-700 md:text-xl"
+              className="mb-8 text-base leading-relaxed text-gray-700 sm:text-lg md:mb-10 md:text-xl"
             >
               Pastas frescas elaboradas a mano, quesos artesanales selectos, fiambres de calidad premium y
               viandas caseras preparadas con amor. La tradicion italiana en cada bocado.
@@ -65,12 +65,12 @@ export function HeroSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col justify-center gap-4 sm:flex-row"
+              className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4"
             >
               <Button
                 onClick={() => scrollToSection('menu-del-dia')}
                 size="lg"
-                className="bg-primary px-8 py-6 text-lg text-white hover:bg-primary/90"
+                className="h-12 bg-primary px-6 text-base text-white hover:bg-primary/90 sm:h-14 sm:px-8 sm:text-lg"
               >
                 Ver menu del dia
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -80,7 +80,7 @@ export function HeroSection() {
                 onClick={() => scrollToSection('productos')}
                 size="lg"
                 variant="outline"
-                className="border-primary px-8 py-6 text-lg text-primary hover:bg-primary/5"
+                className="h-12 border-primary px-6 text-base text-primary hover:bg-primary/5 sm:h-14 sm:px-8 sm:text-lg"
               >
                 Ver todos los productos
               </Button>

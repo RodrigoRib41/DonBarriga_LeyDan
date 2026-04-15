@@ -9,7 +9,7 @@ import { WhatsAppButton } from '../components/WhatsAppButton';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen overflow-x-hidden bg-background">
       <Header />
       <HeroSection />
       <ProductosSection />

@@ -1,94 +1,79 @@
-import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from 'lucide-react';
+import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import logoLeAndDan from '../data/image-2.png';
 import logoDonBarriga from '../data/image-3.png';
 
 export function Footer() {
   return (
-    <footer id="contacto" className="bg-foreground text-background pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* About */}
-          <div className="flex flex-col items-center text-center">
-  
-  <div className="flex items-center justify-center gap-2 mb-4">
-    <img 
-      src={logoDonBarriga} 
-      alt="Don Barriga" 
-      className="h-12 w-auto object-contain"
-    />
+    <footer id="contacto" className="bg-foreground pb-8 pt-14 text-background md:pt-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <div className="mb-4 flex items-center justify-center gap-2 md:justify-start">
+              <img src={logoDonBarriga} alt="Don Barriga" className="h-12 w-auto object-contain" />
+              <span className="text-xl text-primary">&</span>
+              <img src={logoLeAndDan} alt="Le and Dan" className="h-12 w-auto object-contain" />
+            </div>
 
-    <span className="text-primary text-xl">&</span>
+            <div className="mb-3">
+              <h3 className="text-lg font-semibold">Don Barriga - Le and Dan</h3>
+              <p className="text-xs text-background/70">Pastas artesanales</p>
+            </div>
 
-    <img 
-      src={logoLeAndDan} 
-      alt="Le & Dan" 
-      className="h-12 w-auto object-contain"
-    />
-  </div>
+            <p className="max-w-xs text-sm leading-relaxed text-background/80">
+              Pastas frescas, quesos artesanales, fiambres premium y viandas caseras. La tradicion italiana en cada
+              bocado.
+            </p>
+          </div>
 
-  <div className="mb-2">
-    <h3 className="text-lg font-semibold">
-      Don Barriga - Le & Dan
-    </h3>
-    <p className="text-xs text-background/70">
-      Pastas Artesanales
-    </p>
-  </div>
-
-  <p className="text-sm text-background/80 leading-relaxed max-w-xs">
-    Pastas frescas, quesos artesanales, fiambres premium y viandas caseras. 
-    La tradición italiana en cada bocado.
-  </p>
-
-</div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg mb-4">Contacto</h3>
+          <div className="text-center md:text-left">
+            <h3 className="mb-4 text-lg">Contacto</h3>
             <div className="space-y-3">
               <a
                 href="https://wa.me/5493498437467"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm text-background/80 hover:text-primary transition-colors"
+                className="flex items-center justify-center gap-3 text-sm text-background/80 transition-colors hover:text-primary md:justify-start"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="h-4 w-4 shrink-0" />
                 <span>+54 9 3498 43-7467</span>
               </a>
               <a
                 href="mailto:info@donbarriga.com"
-                className="flex items-center gap-3 text-sm text-background/80 hover:text-primary transition-colors"
+                className="flex items-center justify-center gap-3 text-sm text-background/80 transition-colors hover:text-primary md:justify-start"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="h-4 w-4 shrink-0" />
                 <span>info@donbarriga.com</span>
               </a>
-              <div className="flex items-start gap-3 text-sm text-background/80">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>E. López 353<br />Gob. Crespo, Santa Fe</span>
+              <div className="flex items-start justify-center gap-3 text-sm text-background/80 md:justify-start">
+                <MapPin className="mt-1 h-4 w-4 shrink-0" />
+                <span>
+                  E. Lopez 353
+                  <br />
+                  Gob. Crespo, Santa Fe
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Hours */}
-          <div>
-            <h3 className="text-lg mb-4">Horarios</h3>
+          <div className="text-center md:text-left">
+            <h3 className="mb-4 text-lg">Horarios</h3>
             <div className="space-y-3">
-              <div className="flex items-start gap-3 text-sm text-background/80">
-                <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
+              <div className="flex items-start justify-center gap-3 text-sm text-background/80 md:justify-start">
+                <Clock className="mt-1 h-4 w-4 shrink-0" />
                 <div>
                   <p className="mb-1">Lunes a Viernes</p>
                   <p className="text-background/60">9:00 - 20:00</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 text-sm text-background/80">
-                <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
+              <div className="flex items-start justify-center gap-3 text-sm text-background/80 md:justify-start">
+                <Clock className="mt-1 h-4 w-4 shrink-0" />
                 <div>
-                  <p className="mb-1">Sábados</p>
+                  <p className="mb-1">Sabados</p>
                   <p className="text-background/60">9:00 - 15:00</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 text-sm text-background/80">
-                <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
+              <div className="flex items-start justify-center gap-3 text-sm text-background/80 md:justify-start">
+                <Clock className="mt-1 h-4 w-4 shrink-0" />
                 <div>
                   <p className="mb-1">Domingos</p>
                   <p className="text-background/60">Cerrado</p>
@@ -97,38 +82,39 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Social */}
-          <div>
-            <h3 className="text-lg mb-4">Redes Sociales</h3>
-            <div className="flex gap-4">
+          <div className="text-center md:text-left">
+            <h3 className="mb-4 text-lg">Redes sociales</h3>
+            <div className="flex justify-center gap-4 md:justify-start">
               <a
                 href="https://www.instagram.com/_don_barriga_/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-background/10 transition-colors hover:bg-primary"
+                aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-background/10 transition-colors hover:bg-primary"
+                aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="h-5 w-5" />
               </a>
             </div>
+
             <div className="mt-6">
-              <p className="text-sm text-background/80 mb-2">Seguinos en Instagram</p>
+              <p className="mb-2 text-sm text-background/80">Seguinos en Instagram</p>
               <p className="text-sm text-primary">@_don_barriga_</p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-background/20 pt-8">
+        <div className="border-t border-background/20 pt-6">
           <p className="text-center text-sm text-background/60">
-            © 2026 Don Barriga -- Le & Dan. Todos los derechos reservados.
+            © 2026 Don Barriga - Le and Dan. Todos los derechos reservados.
           </p>
         </div>
       </div>

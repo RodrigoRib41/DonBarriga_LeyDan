@@ -135,6 +135,21 @@
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
   }
 
   h1 {
