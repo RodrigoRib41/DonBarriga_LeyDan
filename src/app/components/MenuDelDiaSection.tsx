@@ -6,6 +6,12 @@ import { Button } from './ui/button';
 import { MENU_DEL_DIA } from '../data/menuDelDia';
 
 export function MenuDelDiaSection() {
+  const openWhatsApp = (producto?: string) => {
+    const phoneNumber = "5493498437467";
+    const message = encodeURIComponent(producto ? `Hola! Me gustaría pedir: ${producto}` : "Hola! Me gustaría hacer un pedido.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+  };
+
   const scrollToContacto = () => {
     const element = document.getElementById('contacto');
     if (element) {
@@ -116,7 +122,7 @@ export function MenuDelDiaSection() {
                   
                   {vianda.disponible && (
                     <Button
-                      onClick={scrollToContacto}
+                      onClick={() => openWhatsApp(vianda.nombre)}
                       variant="outline"
                       size="sm"
                       className="mt-4 w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"

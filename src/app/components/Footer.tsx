@@ -1,6 +1,6 @@
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from 'lucide-react';
-import logoLeAndDan from '../../imports/image-2.png';
-import logoDonBarriga from '../../imports/image-3.png';
+import logoLeAndDan from '../data/image-2.png';
+import logoDonBarriga from '../data/image-3.png';
 
 export function Footer() {
   return (

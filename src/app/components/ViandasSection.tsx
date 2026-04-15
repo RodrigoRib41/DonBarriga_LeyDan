@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Clock, Leaf, Heart, Calendar } from 'lucide-react';
@@ -27,12 +28,7 @@ export function ViandasSection() {
     },
   ];
 
-  const scrollToContacto = () => {
-    const element = document.getElementById('contacto');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="viandas" className="py-20 bg-muted/30 relative overflow-hidden">
@@ -128,7 +124,7 @@ export function ViandasSection() {
             </div>
 
             <Button
-              onClick={scrollToContacto}
+              onClick={() => navigate('/menu-semanal')}
               size="lg"
               className="bg-primary hover:bg-primary/90 w-full sm:w-auto"
             >

@@ -6,7 +6,7 @@ export function NosotrosSection() {
     {
       icon: Heart,
       title: 'Pasión Artesanal',
-      description: 'Cada producto es elaborado con dedicación y amor por la cocina italiana tradicional',
+      description: 'Cada producto es elaborado con dedicación y amor por la cocina tradicional',
     },
     {
       icon: Award,
@@ -36,20 +36,11 @@ export function NosotrosSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Don Barriga & Le & Dan</strong> nació del sueño de compartir 
-                los sabores auténticos de la cocina italiana con nuestra comunidad. Somos una fábrica 
-                de pastas artesanales que combina tradición y calidad en cada producto.
-              </p>
-              <p>
-                Desde nuestros inicios, nos comprometimos a elaborar pastas frescas diariamente, 
-                utilizando solo ingredientes de primera calidad. Nuestro equipo trabaja con la misma 
-                dedicación que pondrías al cocinar para tu familia.
-              </p>
-              <p>
-                Además de nuestras famosas pastas frescas, ofrecemos una selección cuidada de quesos 
-                artesanales, fiambres premium y viandas caseras que facilitan tu día a día sin sacrificar 
-                el sabor del hogar.
-              </p>
+                <strong className="text-foreground">Don Barriga y Quesos Le & Dan</strong> nació del sueño de crear una propuesta innovadora para Gobernador Crespo, ofreciendo una amplia variedad de opciones pensadas para el día a día: viandas, comida por kilo, fiambres, bebidas, snacks y mucho más.
+
+</p> 
+<p> Desde nuestros inicios, trabajamos con el compromiso de brindar calidad, practicidad y sabor en cada producto, acompañando a nuestros clientes en cada momento con alternativas ricas y accesibles. </p> 
+<p> Queremos agradecer especialmente a todos los que nos eligen y nos acompañan en este camino. Su apoyo es fundamental para seguir creciendo y mejorando día a día, manteniendo siempre el objetivo de ofrecer lo mejor para cada hogar. </p>
             </div>
 
             {/* Values */}

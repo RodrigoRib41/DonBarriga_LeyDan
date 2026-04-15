@@ -2,11 +2,17 @@ import { useState } from 'react';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from './ui/button';
-import logoLeAndDan from '../../imports/image-2.png';
-import logoDonBarriga from '../../imports/image-3.png';
+import logoLeAndDan from '../data/image-2.png';
+import logoDonBarriga from '../data/image-3.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openWhatsApp = () => {
+    const phoneNumber = '5493498437467';
+    const message = encodeURIComponent('Hola! Me gustaría hacer un pedido.');
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -18,10 +24,10 @@ export function Header() {
 
   const menuItems = [
     { label: 'Inicio', id: 'inicio' },
-    { label: 'Menú del Día', id: 'menu-del-dia' },
     { label: 'Productos', id: 'productos' },
-    { label: 'Nosotros', id: 'nosotros' },
+    { label: 'Menú del Día', id: 'menu-del-dia' },
     { label: 'Viandas', id: 'viandas' },
+    { label: 'Nosotros', id: 'nosotros' },
     { label: 'Contacto', id: 'contacto' },
   ];
 
@@ -73,7 +79,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              onClick={() => scrollToSection('contacto')}
+              onClick={openWhatsApp}
               className="bg-primary hover:bg-primary/90"
             >
               <ShoppingBag className="w-4 h-4 mr-2" />
@@ -111,7 +117,7 @@ export function Header() {
                 </button>
               ))}
               <Button
-                onClick={() => scrollToSection('contacto')}
+                onClick={openWhatsApp}
                 className="bg-primary hover:bg-primary/90 w-full"
               >
                 <ShoppingBag className="w-4 h-4 mr-2" />
